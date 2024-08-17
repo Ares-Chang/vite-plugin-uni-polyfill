@@ -39,6 +39,7 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
+    "play": "nr build && nr -C playground dev:mp-weixin",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
