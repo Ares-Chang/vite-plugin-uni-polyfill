@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-uni-polyfill",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "packageManager": "pnpm@9.5.0",
   "description": "解决 UniApp 依赖版本与 Vue 主版本库差异导致其它库不可使用问题.",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
