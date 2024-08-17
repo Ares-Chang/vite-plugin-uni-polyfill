@@ -1,44 +1,58 @@
-<template>
-  <div>
-    <img src="/static/logo.png" />
-    <h1>Hello <a href='https://github.com/dcloudio/uni-app' target='__blank'>Uni App</a> and <a href='https://github.com/vueuse/vueuse' target='__blank'>VueUse</a>!</h1>
-
-    <h3>Mouse: {{x}} x {{y}}</h3>
-    <h3>
-      Counter: {{count}}
-      <a @click='inc()' style='margin-right:10px'>+</a>
-      <a @click='dec()'>-</a>
-    </h3>
-
-    <br><br>
-    <p><a href='https://github.com/vueuse/vueuse-vite-starter' target='__blank'>Source</a></p>
-    <p><a href='https://vueuse-vue3-example.netlify.app/' target='__blank'>Webpack Example</a></p>
-  </div>
-</template>
 
 <script setup lang="ts">
-import { useMouse, useCounter } from '@vueuse/core'
+import { useCounter } from '@vueuse/core'
 
-const { x, y } = useMouse()
 const { count, inc, dec } = useCounter()
 </script>
 
+<template>
+  <div class="box">
+    <img class="logo" src="/static/logo.png" />
+    <div class="title">Hello <a href='https://github.com/dcloudio/uni-app' target='__blank' class="link">Uni App</a> and <a href='https://github.com/vueuse/vueuse' target='__blank' class="link">VueUse</a>!</div>
+
+    <div class="count">
+      <span>Counter: </span>
+      <button @click="inc()" >+</button>
+      <span>{{count}}</span>
+      <button @click="dec()">-</button>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-html, body, h1, h2, h3, p {
+.box {
   font-family: 'Noto Serif', serif;
   user-select: none;
+  font-size: 38rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40rpx;
 }
 
-#app {
-  text-align: center;
-  color: rgba(0,0,0,0.4);
+.logo {
+  width: 500rpx;
 }
-img {
-  width: 500px;
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rpx;
+  font-size: 50rpx;
 }
-a {
+
+.link {
   color: #41b883;
   text-decoration: none;
   cursor: pointer;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rpx;
 }
 </style>
