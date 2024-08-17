@@ -13,7 +13,12 @@
     "url": "git+https://github.com/Ares-Chang/vite-plugin-uni-polyfill.git"
   },
   "bugs": "https://github.com/Ares-Chang/vite-plugin-uni-polyfill/issues",
-  "keywords": [],
+  "keywords": [
+    "uni",
+    "uniapp",
+    "vueuse",
+    "polyfill"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {

@@ -11,6 +11,24 @@
 - 补充 `TransitionGroup API` 避免小程序 [VueUse](https://github.com/vueuse/vueuse) 编译错误。
   - 提取自 [@uni-app#4604](https://github.com/dcloudio/uni-app/issues/4604) ，感谢提供解决方案！
 
+## Use
+
+```sh
+npm install vite-plugin-uni-polyfill -D
+```
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import uniPolyfill from 'vite-plugin-uni-polyfill'
+
+export default defineConfig({
+  plugins: [
+    uniPolyfill(),
+  ],
+})
+```
+
 ## License
 
 [MIT](./LICENSE) License © 2024-PRESENT [Ares Chang](https://github.com/Ares-Chang)
